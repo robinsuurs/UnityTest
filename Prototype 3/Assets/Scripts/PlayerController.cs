@@ -10,12 +10,15 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         _playerRb = GetComponent<Rigidbody>();
-        _playerRb.AddForce(Vector3.up*1000);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _playerRb.AddForce(Vector3.up*10, ForceMode.Impulse);
+        }
     }
 }
