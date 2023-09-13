@@ -66,26 +66,12 @@ crashlytics-build.properties
 # Packed Addressables
 [Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
-# HDRP generated settings
-/Music RPG/ProjectSettings/HDRPProjectSettings.asset 
-
-# Temporary auto-generated Android Assets
-[Aa]ssets/[Ss]treamingAssets/aa.meta
-[Aa]ssets/[Ss]treamingAssets/aa/*
-/Music RPG/Assets/ThirdPartyAssets/TextMesh Pro/Resources.meta
-/Music RPG/Assets/ThirdPartyAssets/TextMesh Pro.meta
-/Music RPG/Assets/ThirdPartyAssets.meta
-/Music RPG/Assets/ThirdPartyAssets/TextMesh Pro/Resources/Fonts & Materials.meta
 
 # Never ignore DLLs in the FMOD subfolder.
 !/[Aa]ssets/Plugins/FMOD/libs/*
 
-# Don't ignore images and gizmos used by FMOD in the Unity Editor.
-!/[Aa]ssets/Gizmos/FMOD/*
-!/[Aa]ssets/Editor Default Resources/FMOD/*
 
-# Ignore the Cache folder since it is updated locally.
-/Music RPG/Assets/Plugins/FMOD/Cache/*
+
 
 # Ignore bank files in the StreamingAssets folder.
 /[Aa]ssets/StreamingAssets/**/*.bank
