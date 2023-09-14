@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravityModifier;
+    private bool _isOnGround;
     
     
     // Start is called before the first frame update
@@ -20,9 +22,15 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _isOnGround)
         {
             _playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            _isOnGround = false;
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        _isOnGround = true;
     }
 }
